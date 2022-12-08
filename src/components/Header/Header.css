@@ -1,0 +1,11 @@
+.nav-links {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #f7fafd;
+}
+
+.nav-links:hover {
+    color: antiquewhite;
+}

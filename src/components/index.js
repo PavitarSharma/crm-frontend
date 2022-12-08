@@ -1,1 +1,5 @@
 export { default as Jumbotron } from "./Jumbotron/Jumbotron"
+export { default as Header } from "./Header/Header"
+export { default as Footer } from "./Footer/Footer"
+export { default as PageBreadcrumb } from "./PageBreadcrumb/PageBreadcrumb"
+export { default as TicketTable } from "./TicketTable/TicketTable"
