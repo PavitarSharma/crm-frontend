@@ -14,7 +14,7 @@ const DashBoard = () => {
 
       <Row>
         <Col className="text-center mt-5 mb-2">
-          <Link to="add-ticket">
+          <Link to="/add-ticket">
             <Button variant='info' style={{
               fontSize: "1rem",
               padding: "10px 30px"

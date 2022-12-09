@@ -1,11 +1,15 @@
 import { Breadcrumb }from 'react-bootstrap'
-
+import { NavLink } from 'react-router-dom'
 const PageBreadcrumb = ({ page }) => {
   return (
     <Breadcrumb className='mt-4'>
-      <Breadcrumb.Item href="/dashboard" style={{ color: "#000"}}>Home</Breadcrumb.Item>
+      <NavLink to="/dashboard">
+        Home
+      </NavLink>
+
+      <div className='mx-2'>&#47;</div>
       
-      <Breadcrumb.Item active>{page}</Breadcrumb.Item>
+      <Breadcrumb.Item active >{page}</Breadcrumb.Item>
     </Breadcrumb>
   )
 }
