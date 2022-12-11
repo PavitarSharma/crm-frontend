@@ -3,7 +3,7 @@ import { MessageHistory, PageBreadcrumb, UpdateTicket } from "../../components";
 import tickets from "../../assets/data/dummy-ticket.json";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-const ticket = tickets[0];
+// const ticket = tickets[0];
 
 const Ticket = () => {
   const { tId } = useParams();
