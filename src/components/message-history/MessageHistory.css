@@ -1,0 +1,19 @@
+.client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.operator {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message {
+  padding: 1rem;
+  width: 80%;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 
-import Jumbotron from "../Jumbotron/Jumbotron";
+import Jumbotron from "../jumbotron/Jumbotron";
 
 const initialFormData = {
   subject: "",
