@@ -21,7 +21,7 @@ const TicketTable = ({ tickets }) => {
             <tr key={ticket.id}>
               <td>{ticket.id}</td>
               <td>
-                <Link to={`/ticket/${ticket._id}`} style={{
+                <Link to={`/ticket/${ticket.id}`} style={{
                     textDecoration: "none",
                     color: "#000"
                 }}>{ticket.subject}</Link>

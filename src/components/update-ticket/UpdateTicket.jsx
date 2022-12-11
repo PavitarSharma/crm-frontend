@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
+import tickets from "../../assets/data/dummy-ticket.json";
 const UpdateTicket = () => {
   const [message, setMessage] = useState("");
 

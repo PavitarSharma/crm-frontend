@@ -4,7 +4,7 @@ const Footer = () => {
   const getFullYear = date.getFullYear()
 
   return (
-    <div className="text-center copy-right bg-dark text-white py-4">
+    <div className="text-center copy-right  text-white py-4">
       &copy; CRM all right reserved - {getFullYear}.
     </div>
   )

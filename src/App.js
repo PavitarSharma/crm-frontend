@@ -1,25 +1,61 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Footer, Header } from './components'
-import { AddTicket, DashBoard, Login, Register, ResetPassword, Ticket, TicketList } from './pages'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  AddTicket,
+  DashBoard,
+  Login,
+  Register,
+  ResetPassword,
+  Ticket,
+  TicketList,
+} from "./pages";
+import PrivateRoute from "./utils/PrivateRoute";
+
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-      <Header />
         <Routes>
-          <Route exact path="/" element={ <Login /> } />
-          <Route  path="/registration" element={ <Register /> } />
-          <Route  path="/password-reset" element={ <ResetPassword /> } />
-          <Route  path="/dashboard" element={ <DashBoard /> } />
-          <Route  path="/add-ticket" element={ <AddTicket /> } />
-          <Route  path="/ticket-list" element={ <TicketList /> } />
-          <Route  path="/ticket" element={ <Ticket /> } />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/registration" element={<Register />} />
+          <Route path="/password-reset" element={<ResetPassword />} />
+
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <DashBoard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/add-ticket"
+            element={
+              <PrivateRoute>
+                <AddTicket />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/tickets"
+            element={
+              <PrivateRoute>
+                <TicketList />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/ticket/:tId"
+            element={
+              <PrivateRoute>
+                <Ticket />
+              </PrivateRoute>
+            }
+          />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

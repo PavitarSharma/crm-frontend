@@ -1,10 +1,23 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { MessageHistory, PageBreadcrumb, UpdateTicket } from "../../components";
 import tickets from "../../assets/data/dummy-ticket.json";
-
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 const ticket = tickets[0];
-console.log(ticket);
+
 const Ticket = () => {
+  const { tId } = useParams();
+  const [ticket, setTicket] = useState("");
+
+  useEffect(() => {
+    for (let i = 0; i < tickets.length; i++) {
+      if (tickets[i].id.toString() === tId) {
+        setTicket(tickets[i]);
+        continue;
+      }
+    }
+  }, [tId]);
+
   return (
     <Container>
       <Row>
@@ -15,6 +28,7 @@ const Ticket = () => {
 
       <Row className="mt-5">
         <Col className="text-weight-bolder text-secondary ">
+          {tId}
           <div className="subject">
             <b className="me-2">Subject:</b> {ticket.subject}
           </div>
@@ -32,7 +46,7 @@ const Ticket = () => {
 
       <Row>
         <Col>
-          <MessageHistory message={ticket.history} />
+          {ticket.histroy && <MessageHistory message={ticket.history} />}
         </Col>
       </Row>
 
